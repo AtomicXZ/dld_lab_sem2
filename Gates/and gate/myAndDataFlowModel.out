@@ -1,0 +1,58 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_00000235d95cebc0 .scope module, "myAndTB" "myAndTB" 2 1;
+ .timescale 0 0;
+v00000235d95cbe20_0 .var "input1", 0 0;
+v00000235d95cbec0_0 .var "input2", 0 0;
+v00000235d9614f20_0 .net "op", 0 0, L_00000235d95c6f20;  1 drivers
+S_00000235d95ced50 .scope module, "myAndTB" "myAnd" 2 4, 3 1 0, S_00000235d95cebc0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "input1";
+    .port_info 1 /INPUT 1 "input2";
+    .port_info 2 /OUTPUT 1 "op";
+L_00000235d95c6f20 .functor AND 1, v00000235d95cbe20_0, v00000235d95cbec0_0, C4<1>, C4<1>;
+v00000235d95ceee0_0 .net "input1", 0 0, v00000235d95cbe20_0;  1 drivers
+v00000235d95cbce0_0 .net "input2", 0 0, v00000235d95cbec0_0;  1 drivers
+v00000235d95cbd80_0 .net "op", 0 0, L_00000235d95c6f20;  alias, 1 drivers
+    .scope S_00000235d95cebc0;
+T_0 ;
+    %vpi_call 2 6 "$monitor", v00000235d95cbe20_0, v00000235d95cbec0_0, v00000235d9614f20_0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000235d95cbe20_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000235d95cbec0_0, 0, 1;
+    %delay 1, 0;
+    %vpi_call 2 10 "$display", "Input1: %b, Input2: %b, Output: %b", v00000235d95cbe20_0, v00000235d95cbec0_0, v00000235d9614f20_0 {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000235d95cbe20_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000235d95cbec0_0, 0, 1;
+    %delay 1, 0;
+    %vpi_call 2 14 "$display", "Input1: %b, Input2: %b, Output: %b", v00000235d95cbe20_0, v00000235d95cbec0_0, v00000235d9614f20_0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v00000235d95cbe20_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000235d95cbec0_0, 0, 1;
+    %delay 1, 0;
+    %vpi_call 2 18 "$display", "Input1: %b, Input2: %b, Output: %b", v00000235d95cbe20_0, v00000235d95cbec0_0, v00000235d9614f20_0 {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000235d95cbe20_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v00000235d95cbec0_0, 0, 1;
+    %delay 1, 0;
+    %vpi_call 2 22 "$display", "Input1: %b, Input2: %b, Output: %b", v00000235d95cbe20_0, v00000235d95cbec0_0, v00000235d9614f20_0 {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "myAndTB.sv";
+    "myAndDataFlowModel.sv";

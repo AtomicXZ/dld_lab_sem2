@@ -1,0 +1,60 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_000002c0465eeda0 .scope module, "myNorTB" "myNorTB" 2 1;
+ .timescale 0 0;
+v000002c0465e6c90_0 .var "input1", 0 0;
+v000002c0465e6d30_0 .var "input2", 0 0;
+v000002c0465e6dd0_0 .net "op", 0 0, L_000002c0465e73d0;  1 drivers
+S_000002c0465ebd00 .scope module, "myNorTB" "myNor" 2 4, 3 1 0, S_000002c0465eeda0;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "input1";
+    .port_info 1 /INPUT 1 "input2";
+    .port_info 2 /OUTPUT 1 "op";
+L_000002c046635330 .functor OR 1, v000002c0465e6c90_0, v000002c0465e6d30_0, C4<0>, C4<0>;
+L_000002c0465e73d0 .functor NOT 1, L_000002c046635330, C4<0>, C4<0>, C4<0>;
+v000002c0465eef30_0 .net *"_ivl_0", 0 0, L_000002c046635330;  1 drivers
+v000002c0465ebe90_0 .net "input1", 0 0, v000002c0465e6c90_0;  1 drivers
+v000002c0465ebf30_0 .net "input2", 0 0, v000002c0465e6d30_0;  1 drivers
+v000002c0465e6bf0_0 .net "op", 0 0, L_000002c0465e73d0;  alias, 1 drivers
+    .scope S_000002c0465eeda0;
+T_0 ;
+    %vpi_call 2 6 "$monitor", v000002c0465e6c90_0, v000002c0465e6d30_0, v000002c0465e6dd0_0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000002c0465e6c90_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000002c0465e6d30_0, 0, 1;
+    %delay 1, 0;
+    %vpi_call 2 10 "$display", "Input1: %b, Input2: %b, Output: %b", v000002c0465e6c90_0, v000002c0465e6d30_0, v000002c0465e6dd0_0 {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000002c0465e6c90_0, 0, 1;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000002c0465e6d30_0, 0, 1;
+    %delay 1, 0;
+    %vpi_call 2 14 "$display", "Input1: %b, Input2: %b, Output: %b", v000002c0465e6c90_0, v000002c0465e6d30_0, v000002c0465e6dd0_0 {0 0 0};
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v000002c0465e6c90_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000002c0465e6d30_0, 0, 1;
+    %delay 1, 0;
+    %vpi_call 2 18 "$display", "Input1: %b, Input2: %b, Output: %b", v000002c0465e6c90_0, v000002c0465e6d30_0, v000002c0465e6dd0_0 {0 0 0};
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000002c0465e6c90_0, 0, 1;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v000002c0465e6d30_0, 0, 1;
+    %delay 1, 0;
+    %vpi_call 2 22 "$display", "Input1: %b, Input2: %b, Output: %b", v000002c0465e6c90_0, v000002c0465e6d30_0, v000002c0465e6dd0_0 {0 0 0};
+    %end;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "myNorTB.sv";
+    "myNorDataFlowModel.sv";
