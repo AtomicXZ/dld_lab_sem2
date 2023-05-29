@@ -7,6 +7,7 @@ module mux8X1_tb;
 
     initial begin
         $monitor("in: %b | sel: %b | out: %b", in, sel, out);
+        $dumpfile("dump.vcd"); $dumpvars(1);
             in = 'b1; sel = 'b0; #10;
             in = 'b0; sel = 'b0; #10;
             in = 'b10; sel = 'b1; #10;

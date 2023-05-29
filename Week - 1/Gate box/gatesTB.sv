@@ -6,7 +6,7 @@ module gatesTB;
 
     initial begin 
         $monitor("a: %b, b: %b, And: %b, Or: %b, Nand: %b, Nor: %b, Xor: %b, Nxor: %b", a, b, nd, r, nnd, nr, xr, nxr);
-
+        $dumpfile("dump.vcd"); $dumpvars;
         a = 0; b = 0; #10;
         a = 0; b = 1; #10;
         a = 1; b = 0; #10;

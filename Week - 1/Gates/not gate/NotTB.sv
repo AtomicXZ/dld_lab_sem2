@@ -4,12 +4,9 @@ module NotTB;
 
     myNot myNot_inst(.in(in), .out(out));
         initial begin
-            $monitor(in, out);  
-            
-            in = 1'b0;
-            #1 $display("Input: %b, Output: %b", in, out);
-
-            in = 1'b1;
-            #1 $display("Input: %b, Output: %b", in, out);            
+            $monitor("Input: %b, Output: %b", in, out);  
+            $dumpfile("dump.vcd"); $dumpvars;
+            in = 1'b0; #5;
+            in = 1'b1; #5;
         end
 endmodule

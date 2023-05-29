@@ -1,0 +1,39 @@
+$date
+	Mon May 29 17:11:28 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module myXorTB $end
+$var wire 1 ! op $end
+$var reg 1 " input1 $end
+$var reg 1 # input2 $end
+$scope module myXorTB $end
+$var wire 1 " input1 $end
+$var wire 1 # input2 $end
+$var wire 1 ! op $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0#
+0"
+0!
+$end
+#5
+1!
+1"
+#10
+1#
+0"
+#15
+0!
+1"
+#20

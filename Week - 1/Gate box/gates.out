@@ -8,19 +8,19 @@
 :vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
 :vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
 :vpi_module "C:\iverilog\lib\ivl\v2009.vpi";
-S_00000181579668d0 .scope package, "$unit" "$unit" 2 1;
+S_00000215da8b69b0 .scope package, "$unit" "$unit" 2 1;
  .timescale 0 0;
-S_0000018157966a60 .scope module, "gatesTB" "gatesTB" 3 1;
+S_00000215da8b6b40 .scope module, "gatesTB" "gatesTB" 3 1;
  .timescale 0 0;
-v00000181579af150_0 .var "a", 0 0;
-v00000181579af1f0_0 .var "b", 0 0;
-v00000181579af290_0 .net "nd", 0 0, L_0000018157955b10;  1 drivers
-v00000181579642e0_0 .net "nnd", 0 0, L_0000018157955a30;  1 drivers
-v0000018157963de0_0 .net "nr", 0 0, L_00000181579558e0;  1 drivers
-v0000018157963e80_0 .net "nxr", 0 0, L_0000018157955d40;  1 drivers
-v0000018157963f20_0 .net "r", 0 0, L_0000018157955c60;  1 drivers
-v0000018157963ac0_0 .net "xr", 0 0, L_0000018157955cd0;  1 drivers
-S_0000018157932720 .scope module, "dut" "gates" 3 5, 4 1 0, S_0000018157966a60;
+v00000215da8829f0_0 .var "a", 0 0;
+v00000215da882a90_0 .var "b", 0 0;
+v00000215da8b3ae0_0 .net "nd", 0 0, L_00000215da8a6170;  1 drivers
+v00000215da8fed00_0 .net "nnd", 0 0, L_00000215da882d80;  1 drivers
+v00000215da8fea80_0 .net "nr", 0 0, L_00000215da882fc0;  1 drivers
+v00000215da8febc0_0 .net "nxr", 0 0, L_00000215da882b30;  1 drivers
+v00000215da8feb20_0 .net "r", 0 0, L_00000215da869dd0;  1 drivers
+v00000215da8ff160_0 .net "xr", 0 0, L_00000215da8831c0;  1 drivers
+S_00000215da882720 .scope module, "dut" "gates" 3 5, 4 1 0, S_00000215da8b6b40;
  .timescale 0 0;
     .port_info 0 /INPUT 1 "a";
     .port_info 1 /INPUT 1 "b";
@@ -30,42 +30,44 @@ S_0000018157932720 .scope module, "dut" "gates" 3 5, 4 1 0, S_0000018157966a60;
     .port_info 5 /OUTPUT 1 "nr";
     .port_info 6 /OUTPUT 1 "xr";
     .port_info 7 /OUTPUT 1 "nxr";
-L_0000018157955b10 .functor AND 1, v00000181579af150_0, v00000181579af1f0_0, C4<1>, C4<1>;
-L_0000018157955c60 .functor OR 1, v00000181579af150_0, v00000181579af1f0_0, C4<0>, C4<0>;
-L_0000018157955a30 .functor NOT 1, L_0000018157955b10, C4<0>, C4<0>, C4<0>;
-L_00000181579558e0 .functor NOT 1, L_0000018157955c60, C4<0>, C4<0>, C4<0>;
-L_0000018157955cd0 .functor XOR 1, v00000181579af150_0, v00000181579af1f0_0, C4<0>, C4<0>;
-L_0000018157955d40 .functor NOT 1, L_0000018157955cd0, C4<0>, C4<0>, C4<0>;
-v0000018157966c80_0 .net "a", 0 0, v00000181579af150_0;  1 drivers
-v0000018157956840_0 .net "b", 0 0, v00000181579af1f0_0;  1 drivers
-v00000181579328b0_0 .net "nd", 0 0, L_0000018157955b10;  alias, 1 drivers
-v0000018157932950_0 .net "nnd", 0 0, L_0000018157955a30;  alias, 1 drivers
-v00000181579329f0_0 .net "nr", 0 0, L_00000181579558e0;  alias, 1 drivers
-v0000018157932a90_0 .net "nxr", 0 0, L_0000018157955d40;  alias, 1 drivers
-v00000181579af010_0 .net "r", 0 0, L_0000018157955c60;  alias, 1 drivers
-v00000181579af0b0_0 .net "xr", 0 0, L_0000018157955cd0;  alias, 1 drivers
-    .scope S_0000018157966a60;
+L_00000215da8a6170 .functor AND 1, v00000215da8829f0_0, v00000215da882a90_0, C4<1>, C4<1>;
+L_00000215da869dd0 .functor OR 1, v00000215da8829f0_0, v00000215da882a90_0, C4<0>, C4<0>;
+L_00000215da882d80 .functor NOT 1, L_00000215da8a6170, C4<0>, C4<0>, C4<0>;
+L_00000215da882fc0 .functor NOT 1, L_00000215da869dd0, C4<0>, C4<0>, C4<0>;
+L_00000215da8831c0 .functor XOR 1, v00000215da8829f0_0, v00000215da882a90_0, C4<0>, C4<0>;
+L_00000215da882b30 .functor NOT 1, L_00000215da8831c0, C4<0>, C4<0>, C4<0>;
+v00000215da869d30_0 .net "a", 0 0, v00000215da8829f0_0;  1 drivers
+v00000215da8b6cd0_0 .net "b", 0 0, v00000215da882a90_0;  1 drivers
+v00000215da8b6d70_0 .net "nd", 0 0, L_00000215da8a6170;  alias, 1 drivers
+v00000215da8a5f90_0 .net "nnd", 0 0, L_00000215da882d80;  alias, 1 drivers
+v00000215da8a6030_0 .net "nr", 0 0, L_00000215da882fc0;  alias, 1 drivers
+v00000215da8a60d0_0 .net "nxr", 0 0, L_00000215da882b30;  alias, 1 drivers
+v00000215da8828b0_0 .net "r", 0 0, L_00000215da869dd0;  alias, 1 drivers
+v00000215da882950_0 .net "xr", 0 0, L_00000215da8831c0;  alias, 1 drivers
+    .scope S_00000215da8b6b40;
 T_0 ;
-    %vpi_call/w 3 8 "$monitor", "a: %b, b: %b, And: %b, Or: %b, Nand: %b, Nor: %b, Xor: %b, Nxor: %b", v00000181579af150_0, v00000181579af1f0_0, v00000181579af290_0, v0000018157963f20_0, v00000181579642e0_0, v0000018157963de0_0, v0000018157963ac0_0, v0000018157963e80_0 {0 0 0};
+    %vpi_call/w 3 8 "$monitor", "a: %b, b: %b, And: %b, Or: %b, Nand: %b, Nor: %b, Xor: %b, Nxor: %b", v00000215da8829f0_0, v00000215da882a90_0, v00000215da8b3ae0_0, v00000215da8feb20_0, v00000215da8fed00_0, v00000215da8fea80_0, v00000215da8ff160_0, v00000215da8febc0_0 {0 0 0};
+    %vpi_call/w 3 9 "$dumpfile", "dump.vcd" {0 0 0};
+    %vpi_call/w 3 9 "$dumpvars" {0 0 0};
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v00000181579af150_0, 0, 1;
+    %store/vec4 v00000215da8829f0_0, 0, 1;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v00000181579af1f0_0, 0, 1;
+    %store/vec4 v00000215da882a90_0, 0, 1;
     %delay 10, 0;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v00000181579af150_0, 0, 1;
+    %store/vec4 v00000215da8829f0_0, 0, 1;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v00000181579af1f0_0, 0, 1;
+    %store/vec4 v00000215da882a90_0, 0, 1;
     %delay 10, 0;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v00000181579af150_0, 0, 1;
+    %store/vec4 v00000215da8829f0_0, 0, 1;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v00000181579af1f0_0, 0, 1;
+    %store/vec4 v00000215da882a90_0, 0, 1;
     %delay 10, 0;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v00000181579af150_0, 0, 1;
+    %store/vec4 v00000215da8829f0_0, 0, 1;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v00000181579af1f0_0, 0, 1;
+    %store/vec4 v00000215da882a90_0, 0, 1;
     %delay 10, 0;
     %vpi_call/w 3 15 "$finish" {0 0 0};
     %end;

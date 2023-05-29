@@ -1,0 +1,46 @@
+$date
+	Mon May 29 17:03:23 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module testbench $end
+$var wire 4 ! sum [3:0] $end
+$var wire 1 " cout $end
+$var reg 4 # X [3:0] $end
+$var reg 4 $ Y [3:0] $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 $
+b0 #
+0"
+b0 !
+$end
+#10
+b1000 !
+b11 $
+b101 #
+#20
+1"
+b0 !
+b1 $
+b1111 #
+#30
+0"
+b1111 !
+b111 $
+b1000 #
+#40
+1"
+b1110 !
+b1111 $
+b1111 #
+#50

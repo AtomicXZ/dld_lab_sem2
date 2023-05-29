@@ -1,0 +1,44 @@
+$date
+	Mon May 29 16:06:18 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module test_fourbit_subtractor $end
+$var wire 4 ! diff [3:0] $end
+$var wire 1 " borrow $end
+$var reg 4 # X [3:0] $end
+$var reg 4 $ Y [3:0] $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b1 $
+b10 #
+0"
+b1 !
+$end
+#10
+b10 !
+b100 $
+b110 #
+#20
+b1000 !
+b111 $
+b1111 #
+#30
+1"
+b1000 !
+b1000 $
+b0 #
+#40
+b1011 !
+b1010 $
+b101 #
+#50

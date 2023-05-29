@@ -7,52 +7,54 @@
 :vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
 :vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
 :vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
-S_000001963ba4eb90 .scope module, "myOrTB" "myOrTB" 2 1;
+:vpi_module "C:\iverilog\lib\ivl\v2009.vpi";
+S_0000022ccc7c8810 .scope package, "$unit" "$unit" 2 1;
  .timescale 0 0;
-v000001963ba4bdf0_0 .var "input1", 0 0;
-v000001963ba4be90_0 .var "input2", 0 0;
-v000001963ba94f20_0 .net "op", 0 0, L_000001963ba4ef50;  1 drivers
-S_000001963ba4ed20 .scope module, "myOrTB" "myOr" 2 4, 3 1 0, S_000001963ba4eb90;
+S_0000022ccc8150e0 .scope module, "myOrTB" "myOrTB" 3 1;
+ .timescale 0 0;
+v0000022ccc815400_0 .var "input1", 0 0;
+v0000022ccc8154a0_0 .var "input2", 0 0;
+v0000022ccc7cbae0_0 .net "op", 0 0, L_0000022ccc7c8000;  1 drivers
+S_0000022ccc815270 .scope module, "myOrTB" "myOr" 3 4, 4 1 0, S_0000022ccc8150e0;
  .timescale 0 0;
     .port_info 0 /INPUT 1 "input1";
     .port_info 1 /INPUT 1 "input2";
     .port_info 2 /OUTPUT 1 "op";
-L_000001963ba4ef50 .functor OR 1, v000001963ba4bdf0_0, v000001963ba4be90_0, C4<0>, C4<0>;
-v000001963ba4eeb0_0 .net "input1", 0 0, v000001963ba4bdf0_0;  1 drivers
-v000001963ba4bcb0_0 .net "input2", 0 0, v000001963ba4be90_0;  1 drivers
-v000001963ba4bd50_0 .net "op", 0 0, L_000001963ba4ef50;  alias, 1 drivers
-    .scope S_000001963ba4eb90;
+L_0000022ccc7c8000 .functor OR 1, v0000022ccc815400_0, v0000022ccc8154a0_0, C4<0>, C4<0>;
+v0000022ccc7c89a0_0 .net "input1", 0 0, v0000022ccc815400_0;  1 drivers
+v0000022ccc7e2b20_0 .net "input2", 0 0, v0000022ccc8154a0_0;  1 drivers
+v0000022ccc7c7f60_0 .net "op", 0 0, L_0000022ccc7c8000;  alias, 1 drivers
+    .scope S_0000022ccc8150e0;
 T_0 ;
-    %vpi_call 2 6 "$monitor", v000001963ba4bdf0_0, v000001963ba4be90_0, v000001963ba94f20_0 {0 0 0};
+    %vpi_call/w 3 6 "$monitor", "Input1: %b, Input2: %b, Output: %b", v0000022ccc815400_0, v0000022ccc8154a0_0, v0000022ccc7cbae0_0 {0 0 0};
+    %vpi_call/w 3 7 "$dumpfile", "dump.vcd" {0 0 0};
+    %vpi_call/w 3 7 "$dumpvars" {0 0 0};
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v000001963ba4bdf0_0, 0, 1;
+    %store/vec4 v0000022ccc815400_0, 0, 1;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v000001963ba4be90_0, 0, 1;
-    %delay 1, 0;
-    %vpi_call 2 10 "$display", "Input1: %b, Input2: %b, Output: %b", v000001963ba4bdf0_0, v000001963ba4be90_0, v000001963ba94f20_0 {0 0 0};
+    %store/vec4 v0000022ccc8154a0_0, 0, 1;
+    %delay 5, 0;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v000001963ba4bdf0_0, 0, 1;
+    %store/vec4 v0000022ccc815400_0, 0, 1;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v000001963ba4be90_0, 0, 1;
-    %delay 1, 0;
-    %vpi_call 2 14 "$display", "Input1: %b, Input2: %b, Output: %b", v000001963ba4bdf0_0, v000001963ba4be90_0, v000001963ba94f20_0 {0 0 0};
+    %store/vec4 v0000022ccc8154a0_0, 0, 1;
+    %delay 5, 0;
     %pushi/vec4 0, 0, 1;
-    %store/vec4 v000001963ba4bdf0_0, 0, 1;
+    %store/vec4 v0000022ccc815400_0, 0, 1;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v000001963ba4be90_0, 0, 1;
-    %delay 1, 0;
-    %vpi_call 2 18 "$display", "Input1: %b, Input2: %b, Output: %b", v000001963ba4bdf0_0, v000001963ba4be90_0, v000001963ba94f20_0 {0 0 0};
+    %store/vec4 v0000022ccc8154a0_0, 0, 1;
+    %delay 5, 0;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v000001963ba4bdf0_0, 0, 1;
+    %store/vec4 v0000022ccc815400_0, 0, 1;
     %pushi/vec4 1, 0, 1;
-    %store/vec4 v000001963ba4be90_0, 0, 1;
-    %delay 1, 0;
-    %vpi_call 2 22 "$display", "Input1: %b, Input2: %b, Output: %b", v000001963ba4bdf0_0, v000001963ba4be90_0, v000001963ba94f20_0 {0 0 0};
+    %store/vec4 v0000022ccc8154a0_0, 0, 1;
+    %delay 5, 0;
     %end;
     .thread T_0;
 # The file index is used to find the file name in the following table.
-:file_names 4;
+:file_names 5;
     "N/A";
     "<interactive>";
+    "-";
     "myOrTB.sv";
     "myOrDataFlowModel.sv";

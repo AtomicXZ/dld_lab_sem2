@@ -1,0 +1,44 @@
+$date
+	Mon May 29 17:00:10 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module halfSubtractorTB $end
+$var wire 1 ! diff $end
+$var wire 1 " bout $end
+$var reg 1 # X $end
+$var reg 1 $ Y $end
+$scope module halfSubtractorTB $end
+$var wire 1 # X $end
+$var wire 1 $ Y $end
+$var reg 1 " bout $end
+$var reg 1 ! diff $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0$
+0#
+0"
+0!
+$end
+#10
+1!
+1#
+#20
+1"
+1$
+0#
+#30
+0"
+0!
+1#
+#40
